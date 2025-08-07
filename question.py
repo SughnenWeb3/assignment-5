@@ -119,29 +119,29 @@ output = """
    *---------------------------------------*
 
 """
-choice = input(output)
+command = input(output)
 
 # Your implementation here...
 
 verification_fee = 1500
 
 database = {
-    "zakka": {
-        "username": "zakka",
+    "sughnen": {
+        "username": "@andrew",
         "password": "mFeDoO18$$",
         "balance": 56777,
         "is_veried": True
     }
 }
 
-choice = input("select command: ").lower()
-if choice not in ["login", "register", "exit"]:
+command= input("select command: ").lower()
+if command not in ["login", "register", "exit"]:
     print("Invalid command")
-elif choice == "register":
+elif command == "register":
     print("fill the form below to register your account")
     username = input("create username: ").lower()
     if username in database:
-        print(f"\nusername {username} already taken")
+        print(f"username {username} already taken")
     else:
         password = input("Create password")
         initial_amount = float(input("\ninitial amount: "))
